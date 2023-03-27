@@ -33,13 +33,14 @@
 
 # 📖 MY RECIPE APP <a name="about-project"></a>
 
-> This project enables different user to post  like and comment on posted updates.
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
+
 
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-> This projjject was built with the following technologies
+> This project was built with the following technologies
 
 <details>
   <summary>Client</summary>
@@ -68,9 +69,9 @@
 
 > The project has the following features.
 
-- **Like a post from another user**
-- **Comment a post from another user**
-- **Make a post**
+- **Login page and registration page**
+- **Display a list of recipes created by the logged-in user**
+- **display a list of all public recipes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,9 +168,9 @@ To run tests, run the following command:
 
 > The following will be implemented on future updates.
 
-- [ ] **Users will be able to share other posts to their profile**
-- [ ] **Follow users**
-- [ ] **Follow counts**
+-  **Users will be able to share videos of the recipe**
+-  **Follow users**
+- **Add chat functionality**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

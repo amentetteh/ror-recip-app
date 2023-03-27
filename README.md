@@ -31,7 +31,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 MY BLOG POSTS <a name="about-project"></a>
+# 📖 MY RECIPE APP <a name="about-project"></a>
 
 > This project enables different user to post  like and comment on posted updates.
 

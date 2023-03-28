@@ -1,7 +1,7 @@
 /* index */
 table {
   border-collapse: collapse;
-  border: 2px solid black;
+  border: 2px solid rgb(155, 147, 147);
 }
 
 th,
@@ -11,7 +11,7 @@ td {
 }
 
 tr:first-child {
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(155, 148, 148);
 }
 
 th,

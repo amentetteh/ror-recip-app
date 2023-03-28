@@ -6,5 +6,5 @@ class Food < ApplicationRecord
 
   # def food_params
   #   params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
-  # end  
+  # end
 end

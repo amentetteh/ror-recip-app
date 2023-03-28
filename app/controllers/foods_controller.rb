@@ -25,17 +25,16 @@ class FoodsController < ApplicationController
   def destroy
     @food = Food.find(params[:id])
     if @food.destroy
-      puts "Food record deleted successfully."
+      puts 'Food record deleted successfully.'
     else
-      puts "Error deleting food record."
+      puts 'Error deleting food record.'
     end
     redirect_to foods_path(current_user)
   end
-  
 
   private
 
-def food_params
-  params.require(:food).permit(:name, :quantity, :price, :measurement_unit)
-end
+  def food_params
+    params.require(:food).permit(:name, :quantity, :price, :measurement_unit)
+  end
 end

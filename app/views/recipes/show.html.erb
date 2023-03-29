@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<section>
+<h1><%= @recipe.name %></h1>
+    <div class="food-container">
+        <div class="food-name">
+            <p>Preparation time:<%= @recipe.preparation_time  %>hours</p>
+            <p>Cooking time: <%= @recipe.cooking_time %></p>
+            <p>Description: <%= @recipe.description%></p>  
+        </div>
+        <div class="swith-btn">
+        <p>Public</p>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+        </label>
+        </div>
+    </div>
+</section>

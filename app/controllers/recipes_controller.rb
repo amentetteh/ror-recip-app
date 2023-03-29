@@ -7,7 +7,13 @@ class RecipesController < ApplicationController
     end
   
     def show
-      @recipe = Recipe.find(params[:id])
+      @recipe = Recipe.includes(:foods).find(params[:id])
     end
+
+    def public_allocation
+        @recipe = Recipe.find(params[:id])
+        @recipe.update(public: params[:recipe][:public])
+        redirect_to @recipe
+      end      
   end
   

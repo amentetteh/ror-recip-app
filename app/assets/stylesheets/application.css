@@ -1,0 +1,106 @@
+/* index */
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(155, 147, 147);
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+tr:first-child {
+  border-top: 1px solid rgb(155, 148, 148);
+}
+
+th,
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.button {
+  background-color: #ffa500;
+  padding: 0.7rem 1.7rem;
+  margin: 1.5rem 2px;
+}
+
+.button,
+.delete-btn {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  padding: 0.2rem 1.1rem;
+  margin: 1px 0;
+}
+
+/* new food form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.index-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  /* border: 2px solid black; */
+  width: fit-content;
+}

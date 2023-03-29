@@ -1,0 +1,27 @@
+<section class="index-section">
+<div class="index-container">
+  <%= link_to 'New Food', new_food_path(), class: 'button' %>
+  <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Measurement Unit</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.foods.each do |food| %>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.quantity %></td>
+        <td><%= food.price %></td>
+        <td><%= food.measurement_unit %></td>
+        <td><%= link_to 'Delete', food_path(food), data: { turbo_method: :delete }, class: 'delete-btn' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</section>

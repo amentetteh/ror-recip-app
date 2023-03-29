@@ -14,6 +14,12 @@ class RecipesController < ApplicationController
         @recipe = Recipe.find(params[:id])
         @recipe.update(public: params[:recipe][:public])
         redirect_to @recipe
-      end      
+      end   
+    
+    def destroy
+        @recipe = Recipe.find(params[:id])
+        @recipe.destroy
+        redirect_to root_path
+    end
   end
   

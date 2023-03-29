@@ -7,17 +7,20 @@
             <p>Cooking time: <%= @recipe.cooking_time %></p>
             <p>Description: <%= @recipe.description%></p>  
         </div>
-        <div class="swith-btn">
-        <p>Public</p>
-        <label class="switch">
-            <input type="checkbox" checked>
-            <span class="slider round"></span>
-        </label>
-        </div>
+        <%= form_for @recipe, url: public_recipe_path(@recipe), method: :put do |f| %>
+  <div class="swith-btn">
+    <p>Public</p>
+    <label class="switch">
+      <%= f.check_box :public, { checked: @recipe.public } %>
+      <span class="slider round"></span>
+    </label>
+  </div>
+<% end %>
+
     </div>
     <div class="recipe-btns">
-        <%= link_to 'New Food', new_food_path(), class: 'button' %>
-        <%= link_to 'New Food', new_food_path(), class: 'button' %>
+        <%= link_to 'Generate Shopping List', new_food_path(), class: 'button' %>
+        <%= link_to 'Add ingredient', new_food_path(), class: 'button' %>
     </div>
     <table>
   <thead>
@@ -32,9 +35,12 @@
     <% @recipe.foods.each do |food| %>
       <tr>
         <td><%= food.name %></td>
-        <td><%= food.quantity %></td>
+        <td><%= food.quantity %> <%= food.measurement_unit%></td>
         <td><%= food.price %></td>
-        <td><%= link_to 'Delete', food_path(food), data: { turbo_method: :delete }, class: 'delete-btn' %></td>
+        <td>
+            <%= link_to 'Delete', food_path(food), data: { turbo_method: :delete }, class: 'delete-btn' %>
+            <%= link_to 'Modify', food_path(food), data: { turbo_method: :delete }, class: ' delete-btn modify-btn' %>
+        </td>
       </tr>
     <% end %>
   </tbody>

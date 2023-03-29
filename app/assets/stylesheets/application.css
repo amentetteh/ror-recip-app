@@ -35,7 +35,7 @@ tr:nth-child(odd) {
 }
 
 .button,
-.delete-btn {
+.delete-btn, .modify-btn {
   border: none;
   color: white;
   text-align: center;

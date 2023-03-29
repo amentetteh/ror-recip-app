@@ -29,6 +29,12 @@ tr:nth-child(odd) {
   margin: 1.5rem 2px;
 }
 
+.btn-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
 .button,
 .delete-btn,
 .modify-btn {
@@ -104,8 +110,5 @@ input[type="submit"]:hover {
 .index-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-
-  /* border: 2px solid black; */
-  width: fit-content;
+  width: 70%;
 }

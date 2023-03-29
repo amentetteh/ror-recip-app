@@ -1,0 +1,21 @@
+/* recipe */
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.e-foods {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #ffa500;
+    width: 70%;
+    margin: auto;
+  }
+
+  .e-foods >* {
+    margin: 0.5rem;
+    padding: 2px 0.5rem;
+    width: 100%;
+  }

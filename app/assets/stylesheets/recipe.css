@@ -85,7 +85,6 @@ input:checked+.slider:before {
 .food-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border: 2px solid black;
   width: 70%;
   margin: auto;
 }
@@ -95,6 +94,28 @@ input:checked+.slider:before {
 }
 
 .food-container >* {
-  border: 2px solid black;
   padding: 0 2rem;
+}
+
+.recipe-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  border-bottom: 2px solid rgba(102, 100, 100, 0.856);
+}
+
+.recipe-btns >* {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.recipe-show table {
+  margin: auto;
+  margin-top: 30px;
+  width: 70%;
+}
+
+.delete-btn, .action {
+  margin-right: 10px;
+  float: right;
 }

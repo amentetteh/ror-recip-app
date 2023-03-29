@@ -1,5 +1,5 @@
 <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
-<section>
+<section class="recipe-show">
 <h1><%= @recipe.name %></h1>
     <div class="food-container">
         <div class="food-name">
@@ -15,4 +15,28 @@
         </label>
         </div>
     </div>
+    <div class="recipe-btns">
+        <%= link_to 'New Food', new_food_path(), class: 'button' %>
+        <%= link_to 'New Food', new_food_path(), class: 'button' %>
+    </div>
+    <table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th class="action">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipe.foods.each do |food| %>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.quantity %></td>
+        <td><%= food.price %></td>
+        <td><%= link_to 'Delete', food_path(food), data: { turbo_method: :delete }, class: 'delete-btn' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 </section>

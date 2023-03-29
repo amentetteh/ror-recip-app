@@ -29,13 +29,9 @@ tr:nth-child(odd) {
   margin: 1.5rem 2px;
 }
 
-.button:hover {
-  background-color: #1ed760;
-  box-shadow: #f2f2f2;
-}
-
 .button,
-.delete-btn, .modify-btn {
+.delete-btn,
+.modify-btn {
   border: none;
   color: white;
   text-align: center;
@@ -44,6 +40,10 @@ tr:nth-child(odd) {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #1ed760;
 }
 
 .delete-btn {

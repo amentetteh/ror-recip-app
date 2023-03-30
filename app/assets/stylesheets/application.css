@@ -29,15 +29,8 @@ tr:nth-child(odd) {
   margin: 1.5rem 2px;
 }
 
-.btn-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-}
-
 .button,
-.delete-btn,
-.modify-btn {
+.delete-btn {
   border: none;
   color: white;
   text-align: center;
@@ -46,10 +39,6 @@ tr:nth-child(odd) {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
-}
-
-.button:hover {
-  background-color: #1ed760;
 }
 
 .delete-btn {
@@ -110,5 +99,8 @@ input[type="submit"]:hover {
 .index-container {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  align-items: flex-end;
+
+  /* border: 2px solid black; */
+  width: fit-content;
 }

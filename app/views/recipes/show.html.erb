@@ -7,20 +7,22 @@
             <p>Cooking time: <%= @recipe.cooking_time %></p>
             <p>Description: <%= @recipe.description%></p>  
         </div>
-        <%= form_for @recipe, url: public_recipe_path(@recipe), method: :put do |f| %>
+<%= form_for @recipe, url: toggle_public_path(id: @recipe.id), method: :post do |f| %>
   <div class="swith-btn">
-    <p>Public</p>
+    <p><%= @recipe.public? ? 'Public' : 'Private' %></p>
     <label class="switch">
+    <div><%= f.submit "" %></div>
       <%= f.check_box :public, { checked: @recipe.public } %>
       <span class="slider round"></span>
     </label>
   </div>
+  
 <% end %>
 
     </div>
     <div class="recipe-btns">
         <%= link_to 'Generate Shopping List', new_food_path(), class: 'button' %>
-        <%= link_to 'Add ingredient', new_food_path(), class: 'button' %>
+        <%= link_to 'Add ingredient', new_recipe_recipe_food_path(recipe_id: @recipe.id), class: 'button' %>
     </div>
     <table>
   <thead>

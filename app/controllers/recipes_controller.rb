@@ -47,7 +47,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.public = !@recipe.public
     text = @recipe.public? ? 'public' : 'private'
-
     if @recipe.save
       flash[:notice] = "#{@recipe.name} is now #{text}!"
     elsif @recipe.errors.any?

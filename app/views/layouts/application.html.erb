@@ -10,7 +10,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="<%= user_signed_in? ? '' : 'mainbg' %>">
     <%= yield %>
   </body>
 </html>
+ 

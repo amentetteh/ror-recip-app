@@ -2,13 +2,6 @@ class RecipeFoodsController < ApplicationController
   before_action :find_recipe
   before_action :find_recipe_food, only: %i[edit update destroy]
 
-  def index
-    @user = current_user
-    @food = @user.foods.left_outer_joins(:recipe_foods).where(recipe_foods: { id: nil }).includes(:recipe_foods)
-    @food_counts = @food.count
-    @food_prices = @food.sum(:price)
-  end
-
   def new
     @foods = current_user.foods
     if (@recipe.user = current_user)

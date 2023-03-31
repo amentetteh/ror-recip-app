@@ -18,7 +18,7 @@ class RecipeFoodsController < ApplicationController
       redirect_to recipes_path
     end
   end
-  
+
   def create
     @recipe_food = RecipeFood.new(recipe_food_params)
     @recipe_food.recipe = @recipe

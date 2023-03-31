@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   def index
     @recipes = @user.recipes
   end
-  
+
   # def show
   #   @recipe = Recipe.find(params[:id])
   #   @recipe_foods = @recipe.recipe_foods
@@ -82,5 +82,4 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
   end
-
 end

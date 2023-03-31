@@ -41,8 +41,6 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:name, :quantity, :price, :measurement_unit)
   end
 
-  private
-
   def set_user
     @user = current_user
   end

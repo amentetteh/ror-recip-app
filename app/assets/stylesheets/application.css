@@ -30,6 +30,7 @@ tr:nth-child(odd) {
 }
 
 .button,
+.preview-btn,
 .delete-btn {
   border: none;
   color: white;
@@ -43,6 +44,12 @@ tr:nth-child(odd) {
 
 .delete-btn {
   background-color: #f44336;
+  padding: 0.2rem 1.1rem;
+  margin: 1px 0;
+}
+
+.preview-btn {
+  background-color: #5d596b;
   padding: 0.2rem 1.1rem;
   margin: 1px 0;
 }

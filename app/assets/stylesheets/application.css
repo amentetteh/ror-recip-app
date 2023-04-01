@@ -122,8 +122,6 @@ input[type="submit"]:hover {
   flex-direction: column;
   align-items: flex-end;
   width: 70%;
-  /* border: 2px solid black; */
-  /* width: fit-content; */
 }
 
 .log-in form {
@@ -157,6 +155,7 @@ input[type="submit"]:hover {
 
 .log-in-footer a {
   text-decoration: none;
-  color: white;
-  pointer: cursor;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
 }

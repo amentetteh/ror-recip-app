@@ -71,6 +71,14 @@ form {
   border-radius: 5px;
 }
 
+.log-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  color: white;
+}
+
 h1 {
   text-align: center;
 }
@@ -116,4 +124,39 @@ input[type="submit"]:hover {
   width: 70%;
   /* border: 2px solid black; */
   /* width: fit-content; */
+}
+
+.log-in form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+.log-in form .field {
+  width: 100%;
+}
+
+.log-in form .field input[type="password"],
+.log-in form .field input[type="email"],
+.log-in form .field input[type="text"],
+.log-in input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.log-in-footer {
+  color: white;
+}
+
+.log-in-footer a {
+  text-decoration: none;
+  color: white;
+  pointer: cursor;
 }

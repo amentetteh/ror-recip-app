@@ -12,7 +12,7 @@
           <p class="card-text"><b>Total Price: $</b>
             <% total_price = 0 %>
             <% public_recipe.recipe_foods.each do |recipe_food| %>
-            <% total_price += recipe_food.quantity * recipe_food.food.price %>
+            <% total_price += recipe_food.quantity || 0 * recipe_food.food.price || 0 %>
             <% end %>
             <%= total_price %>
           </p>

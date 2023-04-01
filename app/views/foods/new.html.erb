@@ -1,12 +1,12 @@
 <h1>New Food</h1>
 <%= form_for @food do |f| %>
   <div class="form-element">
-    <%= f.label :name, required: true %>
-    <%= f.text_field :name %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
   </div>
   <div class="form-element">
     <%= f.label :quantity %>
-    <%= f.number_field :quantity, required: true %>
+    <%= f.number_field :quantity %>
   </div>
   <div class="form-element">
     <%= f.label :price %>

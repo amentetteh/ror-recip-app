@@ -4,7 +4,7 @@ RSpec.describe Recipe, type: :model do
   subject do
     @user = User.create(name: 'Tetteh')
     @recipe = Recipe.create(name: 'Pizza', preparation_time: 2, cooking_time: 3, description: 'Melt and cook', public: true,
-                            user: @user)
+                            user_id: @user.id)
   end
 
   before { subject.save }
@@ -15,7 +15,7 @@ RSpec.describe Recipe, type: :model do
   end
 
   it 'Name should have valid value' do
-    expect(subject.name).to eql 'recipe 1'
+    expect(subject.name).to eql 'Pizza'
   end
 
   it 'Preparation time should be present' do

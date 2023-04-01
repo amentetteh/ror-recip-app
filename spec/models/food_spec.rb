@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Food, type: :model do
   subject do
     @user = User.create(name: 'Tetteh')
-    @food = Food.create(name: 'Tomatoe', measurement_unit: 'kg', price: 7, quantity: 5, user: @user)
+    @food = Food.create(name: 'Tomatoe', measurement_unit: 'kg', price: 7, quantity: 5, user_id: @user.id)
   end
 
   before { subject.save }
@@ -32,7 +32,7 @@ RSpec.describe Food, type: :model do
   end
 
   it 'Price should have a valid value' do
-    expect(subject.price).to eql 10
+    expect(subject.price).to eql 7.0
   end
 
   it 'Quantity should be present' do
@@ -41,6 +41,6 @@ RSpec.describe Food, type: :model do
   end
 
   it 'Quantity should have a valid value' do
-    expect(subject.quantity).to eql 10
+    expect(subject.quantity).to eql 5.0
   end
 end

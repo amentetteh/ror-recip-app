@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   resources :public_recipes
   post 'toggle_public', to: 'recipes#toggle'
 
-  resources :recipe_foods, only: [:index], path: 'general_shopping_list'
+  root "foods#index"
 end

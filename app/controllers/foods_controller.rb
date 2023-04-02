@@ -27,7 +27,6 @@ class FoodsController < ApplicationController
     @food = Food.find(params[:id])
     if @food.destroy
       flash[:notice] = 'Food deleted successfully!'
-      redirect_to foods_path
     else
       flash.now[:alert] = @food.errors.full_messages.first if @food.errors.any?
       render :index, status: 400

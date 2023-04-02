@@ -1,5 +1,5 @@
 class RecipeFoodsController < ApplicationController
-  before_action :find_recipe
+  before_action :find_recipe, :find_user
   before_action :find_recipe_food, only: %i[edit update destroy]
 
   def new
